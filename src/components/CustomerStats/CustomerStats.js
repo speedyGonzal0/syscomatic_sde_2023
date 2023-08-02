@@ -3,17 +3,15 @@ import {
     Table,
     Thead,
     Tbody,
-    Tfoot,
     Tr,
     Th,
     Td,
-    TableCaption,
     TableContainer,
 } from '@chakra-ui/react'
 
 const CustomerStats = () => {
     return (
-        <div className='container bg-white  min-h-[150px] w-full min-w-[375px] p-5 rounded-xl flex flex-col gap-1'>
+        <div className='container bg-white shrink-0 min-h-[150px] w-full min-w-[375px] p-5 rounded-xl flex flex-col gap-1'>
             <p className='text-lg font-bold'>
                 New customers X Returning customers
             </p>

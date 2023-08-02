@@ -4,7 +4,7 @@ import { Divider } from '@chakra-ui/react'
 
 const DashboardSummary = () => {
     return (
-        <div className='container bg-white h-1/5 min-h-[150px] w-full min-w-[375px] p-5 rounded-xl flex items-center justify-evenly'>
+        <div className='container bg-white h-1/5 min-h-[150px] shrink-0 w-full min-w-[375px] p-5 rounded-xl flex items-center justify-evenly'>
 
 
             <div className='flex flex-col h-full gap-2 w-full items-center lg:flex-row lg:justify-evenly'>
