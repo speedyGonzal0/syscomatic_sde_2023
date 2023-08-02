@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Drawer, DrawerOverlay, DrawerContent, useDisclosure } from '@chakra-ui/react';
 import Logo from './Logo.svg'
-import SidebarOverlay from '../components/SidebarOverlay/SidebarOverlay';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 
 function Layout() {
@@ -22,12 +22,16 @@ function Layout() {
                 <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
                     <DrawerOverlay />
                     <DrawerContent>
-                        <SidebarOverlay/>                        
+                        <Sidebar/>                        
                     </DrawerContent>
                 </Drawer>
 
 
                 <img src={Logo} alt="Onnow.io" className='w-36 cursor-pointer' />
+            </div>
+
+            <div className='hidden lg:contents'>
+                <Sidebar/>
             </div>
 
             <main className='mainContent h-full p-5 overflow-y-auto bg-background lg:ml-80'>
