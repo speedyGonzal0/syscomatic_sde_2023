@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import DashboardSummary from '../components/DashboardSummary/DashboardSummary';
 import CustomerStats from '../components/CustomerStats/CustomerStats';
 import OrderByOutlet from '../components/OrderByOutlet/OrderByOutlet';
+import BrandSearcher from '../components/Brands/BrandSearcher';
 
 
 const Layout = () => {
@@ -42,6 +43,7 @@ const Layout = () => {
 
                 </div>
                 <CustomerStats />
+                <BrandSearcher/>
             </main>
         </div>
     )
