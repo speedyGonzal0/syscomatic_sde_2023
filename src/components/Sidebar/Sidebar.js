@@ -1,8 +1,8 @@
 import React from 'react'
-import Logo from '../../layout/Logo.svg'
+import Logo from '../../assets/Logo.svg'
 import { Divider } from '@chakra-ui/react'
 
-function Sidebar() {
+const Sidebar = () => {
 
     return (
         <nav className='flex flex-col w-80 min-h-full fixed items-center'>
@@ -90,9 +90,6 @@ function Sidebar() {
                 </ul>
                 
             </div>
-
-
-
         </nav>
     )
 }
