@@ -2,6 +2,7 @@ import { Drawer, DrawerOverlay, DrawerContent, useDisclosure } from '@chakra-ui/
 import Logo from '../assets/Logo.svg'
 import Sidebar from '../components/Sidebar/Sidebar';
 import DashboardSummary from '../components/DashboardSummary/DashboardSummary';
+import CustomerStats from '../components/CustomerStats/CustomerStats';
 
 
 const Layout = () => {
@@ -33,10 +34,11 @@ const Layout = () => {
                 <Sidebar/>
             </div>
 
-            <main className='mainContent flex flex-col gap-10 items-center h-full p-5 overflow-y-auto bg-background lg:ml-80 lg:py-14'>
+            <main className='mainContent flex flex-col gap-10 items-center h-full p-2 lg:p-5 overflow-y-auto bg-background lg:ml-80 lg:py-14'>
 
                 Main
                 <DashboardSummary/>
+                <CustomerStats/>
             </main>
         </div>
     )
