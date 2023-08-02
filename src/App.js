@@ -1,12 +1,16 @@
+import { ChakraProvider } from '@chakra-ui/react'
+
+import Layout from './layout/Layout';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1 >
-        Hello world!
-      </h1>
-    </div>
+    <ChakraProvider>
+      <div className="App">
+        <Layout/>
+      </div>
+    </ChakraProvider>
   );
 }
 
