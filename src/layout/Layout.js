@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import DashboardSummary from '../components/DashboardSummary/DashboardSummary';
 import CustomerStats from '../components/CustomerStats/CustomerStats';
 import OrderByOutlet from '../components/OrderByOutlet/OrderByOutlet';
-import BrandSearcher from '../components/BrandTile/BrandSearcher';
+import BrandSearcher from '../components/Brands/BrandSearcher';
 import { useDispatch } from 'react-redux';
 import axios from "axios";
 import { useCallback, useEffect, useMemo } from 'react';
@@ -95,7 +95,7 @@ const Layout = () => {
                 <Sidebar />
             </div>
 
-            <main className='mainContent flex flex-col gap-5 items-center h-full p-2 lg:p-5 overflow-auto bg-background lg:ml-80 lg:py-14'>
+            <main className='mainContent flex flex-col gap-5 items-center h-full p-2 lg:p-5 overflow-y-auto bg-background lg:ml-80 lg:py-14'>
                 <DashboardSummary />
                 <div className="flex flex-col items-center w-full gap-5 ">
                     <OrderByOutlet />
