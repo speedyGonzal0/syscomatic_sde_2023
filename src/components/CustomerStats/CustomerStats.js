@@ -8,8 +8,12 @@ import {
     Td,
     TableContainer,
 } from '@chakra-ui/react'
+import { useSelector } from 'react-redux'
 
 const CustomerStats = () => {
+
+    const customerData = useSelector(state => state.customerStats.customerData);
+
     return (
         <div className='container bg-white shrink-0 min-h-[150px] w-full min-w-[375px] p-5 rounded-xl flex flex-col gap-1'>
             <p className='text-lg font-bold'>
@@ -33,34 +37,34 @@ const CustomerStats = () => {
                     </Thead>
                     <Tbody>
                         <Tr>
-                            <Td className='text-primary font-bold'> New </Td>
-                            <Td > 143 </Td>
-                            <Td >25.4</Td>
-                            <Td  > 12</Td>
-                            <Td >25.4</Td>
-                            <Td >1231</Td>
-                            <Td >25.4</Td>
-                            <Td > 1231</Td>
+                            <Td className='text-primary font-bold'> {customerData[0].category} </Td>
+                            <Td > {customerData[0].orders} </Td>
+                            <Td >{customerData[0].customers}</Td>
+                            <Td > {customerData[0].customerPercentage}</Td>
+                            <Td > 12312 </Td>
+                            <Td >{customerData[0].totalOrderAmount}</Td>
+                            <Td >1312</Td>
+                            <Td > {customerData[0].acv.toFixed(2)}</Td>
                         </Tr>
                         <Tr>
-                            <Td className='text-primary font-bold'> Returning </Td>
-                            <Td > 143 </Td>
-                            <Td >25.4</Td>
-                            <Td  > 12</Td>
-                            <Td >25.4</Td>
-                            <Td >1231</Td>
-                            <Td >25.4</Td>
-                            <Td > 1231</Td>
+                            <Td className='text-primary font-bold'> {customerData[1].category} </Td>
+                            <Td > {customerData[1].orders} </Td>
+                            <Td >{customerData[1].customers}</Td>
+                            <Td > {customerData[1].customerPercentage}</Td>
+                            <Td > 12312 </Td>
+                            <Td >{customerData[1].totalOrderAmount}</Td>
+                            <Td >1312</Td>
+                            <Td > {customerData[1].acv.toFixed(2)}</Td>
                         </Tr>
                         <Tr>
                             <Td className='text-primary font-bold'> Total </Td>
-                            <Td > 143 </Td>
-                            <Td >25.4</Td>
-                            <Td  > 12</Td>
-                            <Td >25.4</Td>
-                            <Td >1231</Td>
-                            <Td >25.4</Td>
-                            <Td > 1231</Td>
+                            <Td > {customerData[0].orders + customerData[1].orders} </Td>
+                            <Td >{customerData[0].customers + customerData[1].customers}</Td>
+                            <Td > {(Number(customerData[0].customerPercentage) + Number(customerData[1].customerPercentage))}</Td>
+                            <Td > 12312 </Td>
+                            <Td >{customerData[0].totalOrderAmount + customerData[1].totalOrderAmount}</Td>
+                            <Td >1312</Td>
+                            <Td > {(customerData[0].acv + customerData[1].acv).toFixed(2)}</Td>
                         </Tr>
                     </Tbody>
                 </Table>

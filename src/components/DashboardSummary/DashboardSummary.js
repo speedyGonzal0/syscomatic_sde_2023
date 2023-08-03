@@ -1,8 +1,13 @@
 import React from 'react'
 import { Divider } from '@chakra-ui/react'
+import { useSelector } from 'react-redux';
 
 
 const DashboardSummary = () => {
+
+    const summaryData = useSelector(state => state.summary);
+
+
     return (
         <div className='container bg-white h-1/5 min-h-[150px] shrink-0 w-full min-w-[375px] p-5 rounded-xl flex items-center justify-evenly'>
 
@@ -13,10 +18,10 @@ const DashboardSummary = () => {
                         Total orders
                     </p>
                     <p className='text-primary text-2xl lg:text-4xl font-bold'>
-                        136
+                        {summaryData.totalOrders}
                     </p>
                 </div>
-                
+
                 <Divider className='lg:hidden' borderWidth='thin' borderColor='blackAlpha.500' />
                 <Divider className='hidden lg:block' orientation='vertical' borderWidth='thin' borderColor='blackAlpha.500' />
 
@@ -25,7 +30,7 @@ const DashboardSummary = () => {
                         Total sales
                     </p>
                     <p className='text-primary text-2xl lg:text-4xl font-bold'>
-                        32652৳
+                        {summaryData.totalOrderAmount}৳
                     </p>
                 </div>
 
@@ -40,7 +45,7 @@ const DashboardSummary = () => {
                         Dispatched orders
                     </p>
                     <p className='text-primary text-2xl lg:text-4xl font-bold'>
-                        32652৳
+                        {summaryData.totalOrderAmount}৳
                     </p>
                 </div>
 
@@ -52,7 +57,7 @@ const DashboardSummary = () => {
                         Avg. basket value
                     </p>
                     <p className='text-primary text-2xl lg:text-4xl font-bold'>
-                        370৳
+                        {summaryData.acv.toFixed(2)}৳
                     </p>
                 </div>
 
