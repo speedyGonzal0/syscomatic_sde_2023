@@ -12,9 +12,9 @@ const BrandSearcher = () => {
 
             <InputGroup className='mt-5'>
                 <InputLeftElement pointerEvents='none'>
-                    <span class="material-symbols-outlined">
+                    <i className="material-symbols-outlined">
                         search
-                    </span>
+                    </i>
                 </InputLeftElement>
                 <Input type='text' placeholder='Brand name' />
             </InputGroup>
