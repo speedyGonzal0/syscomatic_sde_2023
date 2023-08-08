@@ -16,7 +16,7 @@ import { customerStatsActions } from '../store/customerStats';
 const Layout = () => {
 
     const BASE_URL = 'https://staging.syscomatic.com/api/v1';
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDRlNzRmNzkwMjJmMTA1M2IyNTQyMWUiLCJyb2xlIjoiU0EiLCJpYXQiOjE2OTA4ODg2NjgsImV4cCI6MTY5MTE0Nzg2OH0.aNjdjv9D-FxWi-Ji3uPXXl0p42cgBm34mF7TA7FnDsY";
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDRlNzRmNzkwMjJmMTA1M2IyNTQyMWUiLCJyb2xlIjoiU0EiLCJpYXQiOjE2OTE1MjMzODEsImV4cCI6MTY5MTc4MjU4MX0.jhTCdLQhrzHRpVaOSFHwL9f_Ju0M-VrNr1xkpNHIV50";
     
     const config = useMemo(() => ({
         headers: { Authorization: `Bearer ${token}` }
